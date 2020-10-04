@@ -24,7 +24,8 @@ class Book extends React.Component {
   setText() {
     let page = this.state.CurrentPage;
 
-    this.text.current.innerHTML = book[page];
+    this.text.current.innerHTML = book[page].title;
+    this.text.current.innerHTML += book[page].text;
   }
 
   render() {
