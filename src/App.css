@@ -16,43 +16,112 @@ body {
   z-index: -1;
 }
 
-.Post {
-  position: relative;
-  display: inline-block;
-  padding: 4%;
-  margin: 10px 15px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(45deg, #01406C, #7594d8);
-  color: white;
-  font-size: 500;
-}
-
-.PostList {
+.MainBtnsBar {
   position: absolute;
-  z-index: 1;
-  top: 10px;
+  width: 100%;
+  bottom: 0;
 }
 
-.PostTitle {
-  font-size: 23px;
-  font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.main-btn {
+  display: inline;
+  text-align: center;
+  font-size: 35px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.8);
 }
 
-.PostText {
-  font-size: 18px;
+.tab-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 10px
+}
+
+.MusPlayer {
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 5px 15px black;
+  border-radius: 10px;
+  background: linear-gradient(20deg,  #005b97, #8B99F9);
+  text-align: right;
+}
+
+.MusTitle {
+  float: left;
+  font-size: 28px;
   font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  color: white;
+  text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .btnMusPlayer {
+  position: relative;
   display: inline-block;
   color: white;
   font-size: 25px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-  border-radius: 6px;
+  border-radius: 8px;
   margin-right: 10px;
   outline: none;
+}
+
+.SleepTimer {
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 5px 15px black;
+  border-radius: 10px;
+  background: linear-gradient(-20deg,  #005b97, #8B99F9);
+}
+
+.TabTitle {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.custom-range {
+  height: 2rem;
+  padding: 15px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.TimerCounter {
+  display: inline-block;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.CardTitle {
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  border-radius: 6px;
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.SubText {
+  color: white;
+  font-size: 20px;
+}
+
+.BookBackground {
+  width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 5px;
 }
