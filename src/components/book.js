@@ -6,26 +6,29 @@ class Book extends React.Component {
     super(props);
     this.state = {
       CurrentPage: 0,
+      showContent: false,
     };
+
+    this.content = '';
 
     this.text = React.createRef();
 
     this.setText = this.setText.bind(this);
+    this.setPage = this.setPage.bind(this);
+    this.showContent = this.showContent.bind(this);
   }
 
   componentDidMount() {
     this.setText();
-  }
 
-  componentDidUpdate() {
-    this.setText();
+    this.content = this.text.current.innerHTML;
   }
 
   setText() {
     let page = this.state.CurrentPage;
 
-    this.text.current.innerHTML = book[page].title;
-    this.text.current.innerHTML += book[page].text;
+    this.text.current.innerHTML = `<h3 style="text-align: center;">${book[page].title}</h3>`;
+    this.text.current.innerHTML += `<p>${book[page].text}</p>`;
   }
 
   TurnPage(value) {
@@ -40,18 +43,52 @@ class Book extends React.Component {
       page = 0;
     }
 
-    this.setState({CurrentPage: page});
+    this.setState({CurrentPage: page}, () => {
+      this.setText();
+    });
+  }
+
+  setPage(e) {
+    let pageNum = book.findIndex(({title}) => title === e.target.innerText);
+
+    this.setState({CurrentPage: pageNum, showContent: false}, () => {
+      this.setText();
+    });
+  }
+
+  showContent() {
+    let show = this.state.showContent;
+
+    if (show) {
+      this.setText();
+    } else {
+      
+      // fix
+
+    }
+
+    this.setState({showContent: !show});
   }
 
   render() {
+    let isShowContent = this.state.showContent;
+
+    if (isShowContent) {
+      this.content = book.map((el, i) => {
+        return <div className="ContentTitle" key={i} onClick={this.setPage}>{el.title}</div>;
+      });
+    }
+
     return (
       <div>
-        <div ref={this.text} className="BookBackground"></div>
+        <div ref={this.text} className="BookBackground">
+          {this.content}
+        </div>
         <div className="PageBtns">
           <button className="btnPage" style={{float: 'left'}} onClick={this.TurnPage.bind(this, -1)}>
             <i className="fas fa-arrow-alt-circle-left"></i>
           </button>
-          <button className="btnPage">
+          <button className="btnPage" onClick={this.showContent}>
             <i className="fas fa-stream"></i>
           </button>
           <button className="btnPage">
