@@ -90,9 +90,6 @@ class Book extends React.Component {
           <button className="btnPage" onClick={this.showContent}>
             <i className="fas fa-stream"></i>
           </button>
-          <button className="btnPage">
-            <i className="far fa-bookmark"></i>
-          </button>
           <button
             className="btnPage"
             style={{ float: "right" }}
