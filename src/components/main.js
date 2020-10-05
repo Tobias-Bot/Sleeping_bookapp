@@ -22,7 +22,6 @@ class Main extends React.Component {
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
-            Hello
           </div>
           <div
             className="tab-pane fade"
