@@ -56,7 +56,7 @@ class MusPlayer extends React.Component {
         this.setState({ play: false, PlayTimer: false });
         player.pause();
       }
-    }, 1000);
+    }, 60000);
   }
 
   setTimerRange(e) {
