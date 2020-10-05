@@ -9,26 +9,13 @@ class Book extends React.Component {
       showContent: false,
     };
 
-    this.content = '';
+    this.content = "";
 
     this.text = React.createRef();
 
-    this.setText = this.setText.bind(this);
     this.setPage = this.setPage.bind(this);
     this.showContent = this.showContent.bind(this);
-  }
-
-  componentDidMount() {
-    this.setText();
-
-    this.content = this.text.current.innerHTML;
-  }
-
-  setText() {
-    let page = this.state.CurrentPage;
-
-    this.text.current.innerHTML = `<h3 style="text-align: center;">${book[page].title}</h3>`;
-    this.text.current.innerHTML += `<p>${book[page].text}</p>`;
+    this.getPageHtmlText = this.getPageHtmlText.bind(this);
   }
 
   TurnPage(value) {
@@ -38,36 +25,31 @@ class Book extends React.Component {
 
     if (page < 0) {
       page = book.length - 1;
-    }
-    else if (page > book.length - 1) {
+    } else if (page > book.length - 1) {
       page = 0;
     }
 
-    this.setState({CurrentPage: page}, () => {
-      this.setText();
-    });
+    this.setState({ CurrentPage: page });
   }
 
   setPage(e) {
-    let pageNum = book.findIndex(({title}) => title === e.target.innerText);
+    let pageNum = book.findIndex(({ title }) => title === e.target.innerText);
 
-    this.setState({CurrentPage: pageNum, showContent: false}, () => {
-      this.setText();
-    });
+    this.setState({ CurrentPage: pageNum, showContent: false });
   }
 
   showContent() {
     let show = this.state.showContent;
 
-    if (show) {
-      this.setText();
-    } else {
-      
-      // fix
+    this.setState({ showContent: !show });
+  }
 
-    }
+  getPageHtmlText() {
+    let page = this.state.CurrentPage;
 
-    this.setState({showContent: !show});
+    return {
+      __html: book[page].text,
+    };
   }
 
   render() {
@@ -75,8 +57,21 @@ class Book extends React.Component {
 
     if (isShowContent) {
       this.content = book.map((el, i) => {
-        return <div className="ContentTitle" key={i} onClick={this.setPage}>{el.title}</div>;
+        return (
+          <div className="ContentTitle" key={i} onClick={this.setPage}>
+            {el.title}
+          </div>
+        );
       });
+    } else {
+      let page = this.state.CurrentPage;
+
+      this.content = (
+        <div>
+          <h3 style={{ textAlign: "center" }}>{book[page].title}</h3>
+          <p dangerouslySetInnerHTML={this.getPageHtmlText()}></p>
+        </div>
+      );
     }
 
     return (
@@ -85,7 +80,11 @@ class Book extends React.Component {
           {this.content}
         </div>
         <div className="PageBtns">
-          <button className="btnPage" style={{float: 'left'}} onClick={this.TurnPage.bind(this, -1)}>
+          <button
+            className="btnPage"
+            style={{ float: "left" }}
+            onClick={this.TurnPage.bind(this, -1)}
+          >
             <i className="fas fa-arrow-alt-circle-left"></i>
           </button>
           <button className="btnPage" onClick={this.showContent}>
@@ -94,7 +93,11 @@ class Book extends React.Component {
           <button className="btnPage">
             <i className="far fa-bookmark"></i>
           </button>
-          <button className="btnPage" style={{float: 'right'}} onClick={this.TurnPage.bind(this, 1)}>
+          <button
+            className="btnPage"
+            style={{ float: "right" }}
+            onClick={this.TurnPage.bind(this, 1)}
+          >
             <i className="fas fa-arrow-alt-circle-right"></i>
           </button>
         </div>

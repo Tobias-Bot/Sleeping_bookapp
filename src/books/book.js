@@ -45,8 +45,6 @@ const book = [
             Это всего лишь некоторые из теорий сна. Современные технологии дают всё больше возможностей понимать работу мозга, и вероятно, что однажды мы узнаем точную причину возникновения сновидений. Но пока эти времена не наступили, нам надо продолжать спать и видеть сны.
             <br/>
             <br/>
-            <h4>Видео</h4>
-            <div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/lang/ru/amy_adkins_why_do_we_dream" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
         `
     },
 ];
