@@ -4,6 +4,7 @@ import pic from "../pics/MainBackground.gif";
 
 import Book from "./book";
 import MusPlayer from "./musplayer";
+import Notes from "./note";
 
 class Main extends React.Component {
   constructor(props) {
@@ -16,13 +17,6 @@ class Main extends React.Component {
       <div className="Menu">
         <img id="MainPicBackground" src={pic} alt="background" />
         <div className="tab-content" id="nav-tabContent">
-          <div
-            className="tab-pane fade show active"
-            id="home"
-            role="tabpanel"
-            aria-labelledby="nav-home-tab"
-          >
-          </div>
           <div
             className="tab-pane fade"
             id="book"
@@ -39,21 +33,26 @@ class Main extends React.Component {
           >
             <MusPlayer></MusPlayer>
           </div>
+          <div
+            className="tab-pane fade"
+            id="note"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            <Notes></Notes>
+          </div>
+          <div
+            className="tab-pane fade"
+            id="appinfo"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            info about the app
+          </div>
         </div>
 
         <nav className="MainBtnsBar">
           <div className="nav nav-tabs" id="nav-tab" role="tablist">
-            <a
-              className="nav-item nav-link main-btn active"
-              id="nav-home-tab"
-              data-toggle="tab"
-              href="#home"
-              role="tab"
-              aria-controls="nav-home"
-              aria-selected="true"
-            >
-              <i className="fas fa-home"></i>
-            </a>
             <a
               className="nav-item nav-link main-btn"
               id="nav-profile-tab"
@@ -76,6 +75,28 @@ class Main extends React.Component {
             >
               <i className="fas fa-headphones"></i>
             </a>
+            <a
+              className="nav-item nav-link main-btn"
+              id="nav-contact-tab"
+              data-toggle="tab"
+              href="#note"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              <i className="fas fa-sticky-note"></i>
+            </a>
+            {/* <a
+              className="nav-item nav-link main-btn"
+              id="nav-contact-tab"
+              data-toggle="tab"
+              href="#appinfo"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              <i className="fas fa-info-circle"></i>
+            </a> */}
           </div>
         </nav>
       </div>
