@@ -1,6 +1,10 @@
 import React from "react";
 import play1 from "../audio/play1.mp3";
 import play2 from "../audio/play2.mp3";
+import play3 from "../audio/play3.mp3";
+import play4 from "../audio/play4.mp3";
+import play5 from "../audio/play5.mp3";
+import play6 from "../audio/play6.mp3";
 
 class MusPlayer extends React.Component {
   constructor(props) {
@@ -9,6 +13,10 @@ class MusPlayer extends React.Component {
       song: [
         { title: "дождь", src: play1 },
         { title: "гроза", src: play2 },
+        { title: "море", src: play3 },
+        { title: "лес", src: play4 },
+        { title: "ветер", src: play5 },
+        { title: "ручей", src: play6 },
       ],
       counter: 0,
       play: false,

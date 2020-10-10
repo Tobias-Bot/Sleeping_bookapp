@@ -4,7 +4,6 @@ import pic from "../pics/MainBackground.gif";
 
 import Book from "./book";
 import MusPlayer from "./musplayer";
-import Notes from "./note";
 
 class Main extends React.Component {
   constructor(props) {
@@ -32,14 +31,6 @@ class Main extends React.Component {
             aria-labelledby="nav-contact-tab"
           >
             <MusPlayer></MusPlayer>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="note"
-            role="tabpanel"
-            aria-labelledby="nav-contact-tab"
-          >
-            <Notes></Notes>
           </div>
           <div
             className="tab-pane fade"
@@ -79,24 +70,13 @@ class Main extends React.Component {
               className="nav-item nav-link main-btn"
               id="nav-contact-tab"
               data-toggle="tab"
-              href="#note"
-              role="tab"
-              aria-controls="nav-contact"
-              aria-selected="false"
-            >
-              <i className="fas fa-sticky-note"></i>
-            </a>
-            {/* <a
-              className="nav-item nav-link main-btn"
-              id="nav-contact-tab"
-              data-toggle="tab"
               href="#appinfo"
               role="tab"
               aria-controls="nav-contact"
               aria-selected="false"
             >
               <i className="fas fa-info-circle"></i>
-            </a> */}
+            </a>
           </div>
         </nav>
       </div>
