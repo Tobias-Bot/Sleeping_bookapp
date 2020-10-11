@@ -1,6 +1,7 @@
 import React from "react";
 
 import pic from "../pics/MainBackground.gif";
+import logo from "../pics/logo.png";
 
 import Book from "./book";
 import MusPlayer from "./musplayer";
@@ -38,7 +39,28 @@ class Main extends React.Component {
             role="tabpanel"
             aria-labelledby="nav-contact-tab"
           >
-            info about the app
+            <div className="InfoBackground">
+              Сделано с ❤ в паблике Май
+              <br />
+              <img className="logo" src={logo} alt="May logo" />
+              <br />
+              <br />
+              <br />
+              <br />
+              Проблемы с приложением, хочешь предложить что-то поменять или просто с нами поболтать? Напиши нам!
+              <br />
+              <br />
+              <button className="btnMusPlayer">
+                <a
+                  className="linkInBtn"
+                  href="https://vk.com/im?sel=-160404048"
+                >
+                  написать
+                </a>
+              </button>
+              <br />
+              <br />
+            </div>
           </div>
         </div>
 
