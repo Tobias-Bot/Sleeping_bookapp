@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Sleeping_bookapp/static/css/main.9fae2547.chunk.css",
+    "main.js": "/Sleeping_bookapp/static/js/main.de0dc1e6.chunk.js",
+    "main.js.map": "/Sleeping_bookapp/static/js/main.de0dc1e6.chunk.js.map",
+    "runtime-main.js": "/Sleeping_bookapp/static/js/runtime-main.7d321f64.js",
+    "runtime-main.js.map": "/Sleeping_bookapp/static/js/runtime-main.7d321f64.js.map",
+    "static/js/2.ca7e9f77.chunk.js": "/Sleeping_bookapp/static/js/2.ca7e9f77.chunk.js",
+    "static/js/2.ca7e9f77.chunk.js.map": "/Sleeping_bookapp/static/js/2.ca7e9f77.chunk.js.map",
+    "index.html": "/Sleeping_bookapp/index.html",
+    "precache-manifest.f489bf4aad88f2aa0acdc5f6ebb63999.js": "/Sleeping_bookapp/precache-manifest.f489bf4aad88f2aa0acdc5f6ebb63999.js",
+    "service-worker.js": "/Sleeping_bookapp/service-worker.js",
+    "static/css/main.9fae2547.chunk.css.map": "/Sleeping_bookapp/static/css/main.9fae2547.chunk.css.map",
+    "static/js/2.ca7e9f77.chunk.js.LICENSE.txt": "/Sleeping_bookapp/static/js/2.ca7e9f77.chunk.js.LICENSE.txt",
+    "static/media/MainBackground.gif": "/Sleeping_bookapp/static/media/MainBackground.a0469cd4.gif",
+    "static/media/logo.png": "/Sleeping_bookapp/static/media/logo.c88cdb0e.png",
+    "static/media/play1.mp3": "/Sleeping_bookapp/static/media/play1.3576c8a1.mp3",
+    "static/media/play2.mp3": "/Sleeping_bookapp/static/media/play2.9086bb45.mp3",
+    "static/media/play3.mp3": "/Sleeping_bookapp/static/media/play3.0bddcd3c.mp3",
+    "static/media/play4.mp3": "/Sleeping_bookapp/static/media/play4.e3eade89.mp3",
+    "static/media/play5.mp3": "/Sleeping_bookapp/static/media/play5.7c30828c.mp3",
+    "static/media/play6.mp3": "/Sleeping_bookapp/static/media/play6.5e4ac5ce.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d321f64.js",
+    "static/js/2.ca7e9f77.chunk.js",
+    "static/css/main.9fae2547.chunk.css",
+    "static/js/main.de0dc1e6.chunk.js"
+  ]
+}
