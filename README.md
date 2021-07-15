@@ -1,3 +1,15 @@
+# Description
+
+Sleep app. Contains several articles on sleep, sleep timer and nature sounds for relaxation.
+
+# Used
+
+React.js, HTML5, CSS3
+
+# Review
+
+[watch the video](https://youtu.be/iohQW5uOjmY)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
